@@ -1,60 +1,61 @@
-sentinel-ai
-A multi-agent AI system for real-time disaster early warning, risk prediction, and automated rescue planning.
+# 🛰️ sentinel-ai
+
+![Python Version](https://img.shields.io/badge/python-3.10+-blue.svg)
+![Framework](https://img.shields.io/badge/framework-CrewAI-orange.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+
+> A multi-agent AI system for real-time disaster early warning, risk prediction, and automated rescue planning.
 
 This project is designed to pull data from weather, satellite, and ground-level sources to provide immediate, actionable intelligence to civilians and authorities during emergencies like floods, cyclones, and wildfires.
 
-Project Goal
-The mission of sentinel-ai is to reduce human and economic loss from natural disasters by providing a completely open-source, free-to-use, and intelligent warning system.
+---
 
-Core Architecture: Multi-Agent System
-The system is built as a collaborative team of AI agents, each with a specialized role.
+## ✨ Key Features
 
-Data Collector Agent: Fetches real-time data from various APIs (NASA FIRMS for fire, IMD/NWS for weather, OpenRouteService for maps).
+* **Real-time Data Fusion:** Aggregates live data from NASA, weather services, and map APIs.
+* **AI-Powered Risk Prediction:** Uses ML models to forecast disaster paths and impact zones.
+* **Dynamic Safe Routing:** Calculates the safest evacuation routes that actively avoid danger zones.
+* **Automated Reporting:** Generates instant situation summaries for emergency responders.
+* **100% Free & Open Source:** Built with free APIs and open-source models (Groq/Llama 3).
 
-Risk Prediction Agent: Uses ML models and LLM analysis to predict the likelihood and path of a disaster.
+---
 
-Route Planner Agent: Calculates the safest (not just fastest) evacuation routes that avoid high-risk zones.
+## 🤖 Core Architecture: The Agent Team
 
-Emergency Action Agent: Generates personalized, simple "what-to-do" instructions for users based on their location.
+The system is built as a collaborative team of AI agents, each with a specialized role:
 
-Government Report Agent: Automatically generates daily situation reports and risk summaries for authorities.
+### 1. Data Collector Agent
+* **Task:** Fetches real-time data from various APIs (NASA FIRMS for fire, IMD/NWS for weather, OpenRouteService for maps).
 
-Tech Stack
-Backend & AI: Python
+### 2. Risk Prediction Agent
+* **Task:** Uses ML models and LLM analysis to predict the likelihood and path of a disaster.
 
-Agent Framework: CrewAI (or Microsoft AutoGen)
+### 3. Route Planner Agent
+* **Task:** Calculates the *safest* (not just fastest) evacuation routes that avoid high-risk zones.
 
-LLM Brains: Groq API (Llama 3) - 100% Free
+### 4. Emergency Action Agent
+* **Task:** Generates personalized, simple "what-to-do" instructions for users based on their location.
 
-Data Sources: NASA FIRMS, IMD, NWS, OpenFEMA
+### 5. Government Report Agent
+* **Task:** Automatically generates daily situation reports and risk summaries for authorities.
 
-Routing: OpenRouteService
+---
 
-Deployment: Docker, AWS/GCP/Azure (Free Tier)
+## 💻 Tech Stack
 
-Frontend (Future): React, Node.js, MongoDB (MERN Stack)
+* **Backend & AI:** Python
+* **Agent Framework:** CrewAI
+* **LLM "Brains":** Groq API (Llama 3)
+* **Data Sources:** NASA FIRMS, IMD, NWS, OpenFEMA
+* **Routing:** OpenRouteService
+* **Deployment:** Docker, AWS/GCP/Azure (Free Tier)
+* **Frontend (Future):** React, Node.js, MongoDB (MERN Stack)
 
-Getting Started
-1. Clone the repository
-Bash
+---
 
-git clone https://github.com/YOUR_USERNAME/sentinel-ai.git
+## 🚀 Getting Started
+
+### 1. Clone the repository
+```bash
+git clone [https://github.com/YOUR_USERNAME/sentinel-ai.git](https://github.com/YOUR_USERNAME/sentinel-ai.git)
 cd sentinel-ai
-2. Create a virtual environment
-Bash
-
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-3. Install dependencies
-Bash
-
-pip install -r requirements.txt
-4. Set up API keys
-Create a .env file and add your keys:
-
-GROQ_API_KEY=your_groq_api_key
-OPENROUTESERVICE_API_KEY=your_ors_api_key
-5. Run the main agent task
-Bash
-
-python main.py
